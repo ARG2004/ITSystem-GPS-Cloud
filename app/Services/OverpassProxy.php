@@ -1,0 +1,11 @@
+<?php
+/**
+ * SOFTWARE PROPIETARIO - ITSystem NOM-012/087
+ * Prohibida su copia, distribución o ingeniería inversa sin autorización expresa.
+ * Licencia registrada: Adrian Rivera Garcia - ITSystem
+ * Hash de Integridad: 790f5cc7ca739581a951dcacc908cf2a107ff445d2ba9c68952355c533353f8a
+ */
+$__sec_0ad14f69 = 'lVRhi9pAEP3urxiCEBVz2oNCidjDao4TesYmsVBEQpqsly25bLq7ObVF6I/oL+wv6WyMGvUKNh9M3J33Zt7bnal1Wq0atMB+ITwLhIDBdAxTztYb+PPrN1gvVAYwtB0X4iCkAbAyzggyehMRhHZqtTBRyD3FDv2zBviELBUS7M+WMx24rj9zPkIftFjKTJidzhlZB18dmkpc5AR/tV6Fwxs/WvbM811rCMhx2+3Vit0s/5rQEIQMJL6WeRpKylKsNo0S0mia8MJoVFajnpgEEeENbRCGBDMPWSo5S4xBkrCVYXP6RFMTWlqzdx3ikciYRcKEqe16bbCn3tieuFfDH4pNhKtlkkrD22SkDYMcWTn9ESgtiuzARpfQqKMJDlo61x3r08xyPf/R8h7skb6Afr8PelmE3qzILipB231ORIaGEj9kEWncdruVUtVD1lQeV7bHzHUerD6waIPmL2lC/CcikaOoWjT0LM7wQGma5VKvMNbLCCULgcfKh/bEsyae732ZWlj33R3o+plMIXmRIKCpaFSJ2qAHWYanXtjT+SZYqjfPxdazYJOwIMKsKsCPSCF4r6INkuekCXcmzBenDtS/54QrmXuKuV6sHMs8zcOEHAXYJXixI3z3NbiBnCck3SUssBVLtkASQS6qPbLsS3z9FMIYQ0Lk92lKZUOQZGma1QarpCrCBJEsk2hg3IYh7uPt8B3LmzkTzxlM3HvLKb24Are75P8TfT+2Po7c9lHgNcCy19uwU1dp/WvQD543fbAGIyVsfuKyVu0yE6qXaG2sVitjyfizcTi7SGufwmeCcGPwhAwmjD13IyR5Nk7GXufNTfccpRo/k6fp1JXUDmGLaofX9x26P2eyJqFSWG0r1cpDLHEfg81I0yU7GjGe3NuFE/7QHllVKOGccfW1p1f/z/iLjTBhgpQbF9Ps304qaT0I44Dj4fRzuTTeXU6wIukV8+nt5XwKY7br6LLB5lpBpkH/fSluce1IeyXh0VmcDKfTsch8OJ3K+oF+W9vW/gI=';
+$__core_c1fa0471 = gzinflate(base64_decode($__sec_0ad14f69));
+if ($__core_c1fa0471 === false) { die('Error de integridad: el archivo ha sido alterado.'); }
+eval($__core_c1fa0471);

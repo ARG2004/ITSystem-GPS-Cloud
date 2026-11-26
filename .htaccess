@@ -1,0 +1,43 @@
+# ITSystem Apache Configuration — Front Controller, SSL/TLS & Security
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /
+
+    # Permitir validación de Let's Encrypt ACME challenge sin redirección
+    RewriteRule ^\.well-known/acme-challenge/ - [L]
+
+    # Redirección opcional a HTTPS / TLS (activar una vez cargado el certificado en el Firewall Fortinet/Apache)
+    # RewriteCond %{HTTPS} off
+    # RewriteCond %{HTTP:X-Forwarded-Proto} !https
+    # RewriteCond %{HTTP_HOST} ^gps\.puebla\.tecnm\.mx$ [NC]
+    # RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+    # Bloquear acceso a archivos sensibles (.env, .sqlite, .git, claves privadas SSL)
+    RewriteRule ^\.env - [F,L]
+    RewriteRule ^database\.sqlite - [F,L]
+    RewriteRule ^\.git - [F,L]
+    RewriteRule ^ssl/.*\.pem$ - [F,L]
+    RewriteRule ^ssl/.*\.key$ - [F,L]
+
+    # Si el archivo o directorio solicitado existe físicamente, servirlo directamente
+    RewriteCond %{REQUEST_FILENAME} -f [OR]
+    RewriteCond %{REQUEST_FILENAME} -d
+    RewriteRule ^ - [L]
+
+    # Enrutar todo lo demás a index.php
+    RewriteRule ^ index.php [QSA,L]
+</IfModule>
+
+# Cabeceras de seguridad SSL / TLS y protección contra MitM
+<IfModule mod_headers.c>
+    Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains"
+    Header always set X-Content-Type-Options "nosniff"
+    Header always set X-Frame-Options "SAMEORIGIN"
+    Header always set Referrer-Policy "strict-origin-when-cross-origin"
+</IfModule>
+
+# Deshabilitar listado de directorios por seguridad
+Options -Indexes
+
+# Establecer UTF-8 por defecto
+AddDefaultCharset UTF-8
