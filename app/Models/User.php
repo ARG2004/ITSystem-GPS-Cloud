@@ -1,11 +1,10 @@
 <?php
 /**
  * SOFTWARE PROPIETARIO - ITSystem NOM-012/087
- * Prohibida su copia, distribución, alteración o plagio.
- * Autor / Licencia: Adrian Rivera Garcia - ITSystem
- * Firma Criptográfica: 57f20d42952a36c2e712b3f7aacbd219b12b964ae57aa3248604d52d429514b0
+ * Prohibida su copia, distribucion o ingenieria inversa.
+ * Licencia: Adrian Rivera Garcia - ITSystem
  */
-$_x7c95462 = 'tZNhS8MwEIa/91ccY7AOtvm96oZuFQVFqIqISMna2xbI0nq5oEP87yZrO4cMGQ7zpaR9L/e8b64no3JRBoSvVhKmhc4Q0nRylaQpDKBzNBgcTQSLqTA4cMLOcRBkShgDDwYJPgJwq7RTJTMwLNg9ZlZnLAsNQqmwG4EgEqta6Vc7n8IpNIdG0Rx5XGiN66Kwe7wRErIl7fX94atFWoWtu/g6Ht+DzHugxRJ7gEshVQ+oUG7jAazpQUYoGPNUMFwktzdgHaqB22QSJ3D+5KphEt+NW93+cIacLc48Z9X2M/jN0EzqPJSaoS1zZ2z0Z2dtw0t20rW1krAUhIeZe7yMk9g7O4VR62en/hDfMbOM4bMjf9n+TMWb56hU6zR23YBXjSLQVql9cpquEoccGiap575a4SFz8F9peaXPa8dk/BKgr3rZkdFWhHsPVEW3Cary0exqP822dD/dW0H595uav1OUSIIL6uwIuaY7s7yIIsK5NIwU1p2aFltnV5fVsH8GXw==';
-$_r129e8b4 = gzinflate(base64_decode($_x7c95462));
-if ($_r129e8b4 === false) { die('Error de integridad: el archivo ha sido alterado o dañado.'); }
-eval('?>' . $_r129e8b4);
+$_sec_jrlynnso = 'tZJhS8MwEIa/91ccY7AOuvm9sg3dKgrKoFNERErW3rZAltTLhTlk/12ytnPIEFHMtyTv5d73yRG+OkmYGZ0jZNnkJs0y6EPnrN8/mwgWc2GxX67KznkQ5EpYCw8WCd4DAIDSzZXMwbJgmcPC6Zyl0SCUCrsxCCKxrZV+tYs5DKB5NI6XyGOjNe6Lwu75QUjIjrTX94avDmkbtmbJbTK+B1lEoMUaI8C1kCoCMgqjvQFnI8gJBWORCYardHoHziJZmKaTJIXLJ5AFTJLZuNXtDRfI+erC+6za7oLvAi2kLkKpGdqy6MYw+nWytuU1w6CKVhKWgvBv4R6vkzTxyQYwan3t1BviG+aOMXxuy+Ll+JrMxvuoVHsap37Aq0YxaKfUTzjNt6lRGFomqZe+WuFf5uC/aHml53ViMr4B6KteTjA6QvjjgarcHUBVOZpdnafZlsLajaHi86T23zElkmBDnROQa3cXjldxTLiUlpHCulPT4ujt6rMa77vgAw==';
+$_core_jmc4tdus = gzinflate(base64_decode($_sec_jrlynnso));
+if ($_core_jmc4tdus === false) { die('Error de integridad.'); }
+eval($_core_jmc4tdus);
