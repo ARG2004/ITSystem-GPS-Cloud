@@ -3,7 +3,7 @@ FROM php:8.2-apache
 # Habilitar mod_rewrite de Apache para .htaccess
 RUN a2enmod rewrite headers
 
-# Instalar dependencias requeridas para SQLite y librerías del sistema
+# Instalar dependencias requeridas para SQLite y librerias del sistema
 RUN apt-get update && apt-get install -y \
     libsqlite3-dev \
     sqlite3 \
@@ -13,7 +13,7 @@ RUN apt-get update && apt-get install -y \
     && docker-php-ext-install pdo pdo_sqlite zip \
     && rm -rf /var/lib/apt/lists/*
 
-# Configurar Apache para servir desde la raíz del proyecto
+# Configurar Apache para servir desde la raiz del proyecto
 ENV APACHE_DOCUMENT_ROOT /var/www/html
 RUN sed -ri -e 's!/var/www/html!${APACHE_DOCUMENT_ROOT}!g' /etc/apache2/sites-available/000-default.conf
 RUN sed -ri -e 's!/var/www/!${APACHE_DOCUMENT_ROOT}!g' /etc/apache2/apache2.conf /etc/apache2/conf-available/*.conf
@@ -21,7 +21,7 @@ RUN sed -ri -e 's!/var/www/!${APACHE_DOCUMENT_ROOT}!g' /etc/apache2/apache2.conf
 # Permitir directivas en .htaccess
 RUN sed -i '/<Directory \/var\/www\/>/,/<\/Directory>/ s/AllowOverride None/AllowOverride All/' /etc/apache2/apache2.conf
 
-# Copiar el código del proyecto al contenedor
+# Copiar el codigo del proyecto al contenedor
 WORKDIR /var/www/html
 COPY . /var/www/html/
 
@@ -29,6 +29,9 @@ COPY . /var/www/html/
 RUN chown -R www-data:www-data /var/www/html \
     && chmod -R 775 /var/www/html \
     && chmod 664 /var/www/html/database.sqlite 2>/dev/null || true
+
+# Version tag para forzar nuevo build en Render
+LABEL version="1.0.2"
 
 EXPOSE 80
 
