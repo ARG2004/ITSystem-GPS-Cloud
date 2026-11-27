@@ -3,14 +3,15 @@ FROM php:8.2-apache
 # Habilitar mod_rewrite de Apache para .htaccess
 RUN a2enmod rewrite headers
 
-# Instalar dependencias requeridas para SQLite y librerias del sistema
+# Instalar dependencias requeridas para SQLite, PostgreSQL y librerias del sistema
 RUN apt-get update && apt-get install -y \
     libsqlite3-dev \
     sqlite3 \
+    libpq-dev \
     libzip-dev \
     zip \
     unzip \
-    && docker-php-ext-install pdo pdo_sqlite zip \
+    && docker-php-ext-install pdo pdo_sqlite pdo_pgsql pgsql zip \
     && rm -rf /var/lib/apt/lists/*
 
 # Configurar Apache para servir desde la raiz del proyecto
